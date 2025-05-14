@@ -1,7 +1,5 @@
 # UberEats
-UberEats 클론코딩
-
-
+UberEats backend source
 
 임시 package.json 정보
 ```json
