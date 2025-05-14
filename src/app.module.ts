@@ -1,9 +1,16 @@
 import { Module } from '@nestjs/common';
 import {GraphQLModule} from "@nestjs/graphql";
+import { join } from 'path';
+import {ApolloDriver} from "@nestjs/apollo";
+import { RestaurantsModule } from './restaurants/restaurants.module';
 
 @Module({
   imports: [
-      GraphQLModule.forRoot()
+      GraphQLModule.forRoot({
+          driver: ApolloDriver,
+          autoSchemaFile: true,
+      }),
+      RestaurantsModule
   ],
   controllers: [],
   providers: [],
